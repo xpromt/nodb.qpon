@@ -1,0 +1,8 @@
+name: nodbqpon
+
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8080:80"

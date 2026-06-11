@@ -6,12 +6,15 @@
 <title>Olexander Skidan — Full-Stack Product Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
-<!-- NAV -->
+<!-- CRT SCANLINE OVERLAY -->
+<div class="crt" aria-hidden="true"></div>
+
+<!-- NAV / HUD -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <span class="nav-initials">OS</span>
@@ -25,7 +28,7 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#timeline">Timeline</a>
-      <a href="#contact" class="nav-cta">Get in touch</a>
+      <a href="#contact" class="nav-cta">Press Start</a>
     </div>
   </div>
 </nav>
@@ -33,27 +36,27 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="container">
-    <p class="eyebrow">Full-stack engineer · product builder · digital creator</p>
+    <p class="eyebrow">▶ Player 1 · Full-stack engineer · product builder</p>
     <h1 class="hero-headline">I turn complex ideas<br>into working products.</h1>
-    <p class="hero-sub">Engineering, design, and business strategy — since 1995.<br>Whether you need a full-stack web application, a secure real-time communication platform, or an automated production pipeline — I design, build, and ship it end to end.</p>
+    <p class="hero-sub">Engineering, design, and business strategy — since 1995.<br>Whether you need a full-stack web app, a secure real-time comms platform, or an automated production pipeline — I design, build, and ship it end to end.</p>
     <div class="hero-ctas">
-      <a href="#projects" class="btn btn-primary">See my work</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <a href="#projects" class="btn btn-primary">▶ Start game</a>
+      <a href="#contact" class="btn btn-ghost">Insert coin</a>
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-num">30<span class="stat-plus">+</span></span>
-        <span class="stat-label">Years building</span>
+        <span class="stat-num" data-count="30">0<span class="stat-plus">+</span></span>
+        <span class="stat-label">Years · LVL</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">4</span>
-        <span class="stat-label">Founded ventures</span>
+        <span class="stat-num" data-count="4">0</span>
+        <span class="stat-label">Ventures founded</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
         <span class="stat-num">E2EE</span>
-        <span class="stat-label">Security depth</span>
+        <span class="stat-label">Special move</span>
       </div>
     </div>
   </div>
@@ -62,7 +65,7 @@
 <!-- SERVICES -->
 <section class="section" id="services">
   <div class="container">
-    <p class="section-eyebrow">What I can help you with</p>
+    <p class="section-eyebrow">★ Level select</p>
     <h2 class="section-title">The problems I solve</h2>
     <div class="services-grid">
       <div class="service-card">
@@ -108,7 +111,7 @@
 <!-- SKILLS -->
 <section class="section section--dark" id="skills">
   <div class="container">
-    <p class="section-eyebrow">The honest split</p>
+    <p class="section-eyebrow">⚡ Skill tree</p>
     <h2 class="section-title">Most developers list what they know.<br>Here's what I actually reach for.</h2>
     <div class="skills-grid">
       <div class="skills-col">
@@ -161,7 +164,7 @@
         <div class="security-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <p class="section-eyebrow" style="margin-top:1rem;">Deep specialisation</p>
+        <p class="section-eyebrow" style="margin-top:1rem;">★ Boss-level specialisation</p>
         <h2 class="security-headline">I've built systems that assume<br>the network is hostile.</h2>
       </div>
       <div class="security-right">
@@ -183,7 +186,7 @@
 <!-- PROJECTS -->
 <section class="section" id="projects">
   <div class="container">
-    <p class="section-eyebrow">Selected work</p>
+    <p class="section-eyebrow">▣ Inventory · selected work</p>
     <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
@@ -248,7 +251,7 @@
 <!-- TIMELINE -->
 <section class="section section--dark" id="timeline">
   <div class="container">
-    <p class="section-eyebrow">1995 → present</p>
+    <p class="section-eyebrow">1995 → present · speedrun</p>
     <h2 class="section-title">Career timeline</h2>
     <div class="timeline">
 
@@ -360,7 +363,7 @@
 <section class="section section--contact" id="contact">
   <div class="container">
     <div class="contact-wrap">
-      <p class="section-eyebrow">Available for new projects</p>
+      <p class="section-eyebrow">♥ Continue? · available for new projects</p>
       <h2 class="contact-headline">Let's build something.</h2>
       <p class="contact-sub">I'm available for full-stack development, product architecture, and consulting work. Tell me what you're building.</p>
       <div class="contact-links">
@@ -380,6 +383,12 @@
     </div>
   </div>
 </section>
+
+<!-- ACHIEVEMENT TOAST -->
+<div class="achievement" id="achievement" role="status" aria-live="polite">
+  <span class="achievement-icon">★</span>
+  <span class="achievement-text" id="achievement-text">Achievement unlocked</span>
+</div>
 
 <script>
   const nav = document.getElementById('nav');
@@ -406,6 +415,94 @@
       }
     });
   });
+
+  /* ── Achievement toast ─────────────────────────────────── */
+  const toast = document.getElementById('achievement');
+  const toastText = document.getElementById('achievement-text');
+  let toastTimer;
+  const unlocked = new Set();
+  function unlock(msg, once = true) {
+    if (once && unlocked.has(msg)) return;
+    unlocked.add(msg);
+    toastText.textContent = msg;
+    toast.classList.add('achievement--show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('achievement--show'), 2600);
+  }
+
+  /* ── Animated stat counters (count-up when in view) ────── */
+  const counters = document.querySelectorAll('.stat-num[data-count]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      io.unobserve(el);
+      const target = +el.dataset.count;
+      const plus = el.querySelector('.stat-plus');
+      let cur = 0;
+      const step = Math.max(1, Math.round(target / 24));
+      const tick = () => {
+        cur = Math.min(target, cur + step);
+        el.firstChild.nodeValue = String(cur);
+        if (cur < target) requestAnimationFrame(tick);
+      };
+      tick();
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(c => io.observe(c));
+
+  /* ── Reveal sections as you "explore" the map ──────────── */
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        reveal.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.service-card, .project-card, .timeline-item').forEach((el, i) => {
+    el.style.setProperty('--reveal-delay', (i % 6) * 60 + 'ms');
+    reveal.observe(el);
+  });
+
+  /* ── Cards: pixel "press" + collect coin ───────────────── */
+  document.querySelectorAll('.service-card, .project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.remove('is-collected');
+      void card.offsetWidth;
+      card.classList.add('is-collected');
+      unlock('Item collected: ' + (card.querySelector('h3')?.textContent || 'loot'));
+    });
+  });
+
+  /* ── Skill tags: XP popup ──────────────────────────────── */
+  document.querySelectorAll('.tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const pop = document.createElement('span');
+      pop.className = 'xp-pop';
+      pop.textContent = '+XP';
+      tag.appendChild(pop);
+      setTimeout(() => pop.remove(), 700);
+    });
+  });
+
+  /* ── Konami code easter egg ────────────────────────────── */
+  const seq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  let pos = 0;
+  window.addEventListener('keydown', (e) => {
+    const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    pos = (k === seq[pos]) ? pos + 1 : (k === seq[0] ? 1 : 0);
+    if (pos === seq.length) {
+      pos = 0;
+      document.body.classList.toggle('cheat-mode');
+      unlock('CHEAT CODE: rainbow mode!', false);
+    }
+  });
+
+  /* ── First-scroll achievement ──────────────────────────── */
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) unlock('Quest started: exploring the map');
+  }, { once: false });
 </script>
 </body>
 </html>

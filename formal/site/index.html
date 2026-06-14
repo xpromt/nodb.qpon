@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Olexander Skidan — Full-Stack Product Engineer</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -143,7 +148,10 @@
           <span class="tag tag--also">React</span>
           <span class="tag tag--also">Node.js / NestJS</span>
           <span class="tag tag--also">Next.js</span>
+          <span class="tag tag--also">Ubuntu servers</span>
           <span class="tag tag--also">WordPress</span>
+          <span class="tag tag--also">OpenCart</span>
+          <span class="tag tag--also">SEO</span>
           <span class="tag tag--also">MySQL</span>
           <span class="tag tag--also">Redux</span>
         </div>
@@ -191,7 +199,7 @@
           <h3>Det Kollektive Klædeskab</h3>
           <span class="project-type">Multi-app platform</span>
         </div>
-        <p>Clothing-sharing ecosystem: consumer app, business app, admin panel, and .NET backend — deployed on IIS with full service worker lifecycle management and zero-downtime update propagation.</p>
+        <p>Closed codes sharing exchange system. Consumer app, business app, admin panel, and .NET backend — deployed on IIS with full service worker lifecycle management and zero-downtime update propagation.</p>
         <div class="project-tags">
           <span class="tag tag--stack">Angular</span>
           <span class="tag tag--stack">Ionic</span>
@@ -205,7 +213,7 @@
           <h3>Done Qpon / SkillDeal</h3>
           <span class="project-type">Micro-marketplace</span>
         </div>
-        <p>Marketplace where professionals attach time-limited discount coupons to shareable skill profiles. Built after a full security and architecture audit covering auth, API hardening, and data model refactoring.</p>
+        <p>Hobby project - marketplace where professionals attach time-limited discount coupons to shareable skill profiles. Built after a full security and architecture audit covering auth, API hardening, and data model refactoring.</p>
         <div class="project-tags">
           <span class="tag tag--stack">React</span>
           <span class="tag tag--stack">Node.js</span>
@@ -233,12 +241,14 @@
           <h3>Creavi — web &amp; brand work</h3>
           <span class="project-type">Agency work</span>
         </div>
-        <p>Full-stack development and visual identity work for a software engineering company, including SVG design systems, component libraries, and client-facing web applications.</p>
+        <p>Full-stack development spanning secure video conferencing and an entertainment tourism portal with live ticket sales. Focused on complex scheduling architectures, dynamic theming, legacy code refactoring, CLI automation, and shipping cross-platform Android and iOS apps.</p>
         <div class="project-tags">
-          <span class="tag tag--stack">Angular</span>
-          <span class="tag tag--stack">TypeScript</span>
-          <span class="tag tag--stack">SVG</span>
-          <span class="tag tag--stack">NestJS</span>
+          <span class="tag tag--stack">Angular + Angular JS</span>
+          <span class="tag tag--stack">C#</span>
+          <span class="tag tag--stack">Web-RTC</span>
+          <span class="tag tag--stack">Microsoft SQL</span>
+          <span class="tag tag--stack">Ubuntu</span>
+          <span class="tag tag--stack">Azure</span>
         </div>
       </div>
     </div>
@@ -256,7 +266,7 @@
         <span>Era I — AI &amp; systems engineering</span>
       </div>
       <div class="timeline-item">
-        <div class="timeline-year">1995–98</div>
+        <div class="timeline-year">1995–2000</div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
           <div class="timeline-role">Software engineer — intelligent testing systems</div>
@@ -267,7 +277,7 @@
         <div class="timeline-year">1998–04</div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <div class="timeline-role">Graphic designer → multimedia developer</div>
+          <div class="timeline-role">Graphic designer → developer → automated workflows</div>
           <div class="timeline-company">Companion · Drive · Aeronet</div>
         </div>
       </div>
@@ -377,6 +387,24 @@
           GitHub
         </a>
       </div>
+      <form class="contact-form" id="contact-form">
+        <div class="contact-form-header">
+          <span class="contact-form-title">Send a message</span>
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-name">NAME:</label>
+          <input type="text" id="contact-name" name="name" autocomplete="name" placeholder="enter your name">
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-email">EMAIL:</label>
+          <input type="email" id="contact-email" name="email" autocomplete="email" placeholder="enter your email">
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-msg">MESSAGE:</label>
+          <textarea id="contact-msg" name="message" rows="4" placeholder="type your message..."></textarea>
+        </div>
+        <button type="submit" class="contact-form-send">SEND</button>
+      </form>
     </div>
   </div>
 </section>
@@ -406,6 +434,24 @@
       }
     });
   });
+
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const msg = document.getElementById('contact-msg').value.trim();
+      if (!name || !email || !msg) {
+        alert('Please fill in all fields.');
+        return;
+      }
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+      window.location.href = 'mailto:your@email.com?subject=' + subject + '&body=' + body;
+      contactForm.reset();
+    });
+  }
 </script>
 </body>
 </html>

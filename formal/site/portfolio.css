@@ -749,73 +749,92 @@ a { color: inherit; text-decoration: none; }
   max-width: 500px;
   margin-top: 3rem;
   border: 1px solid var(--border);
-  padding: 2rem;
   background: var(--bg-card);
+  overflow: hidden;
 }
 
 .contact-form-header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 2rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-sec);
+  border-bottom: 1px solid var(--border);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+}
+
+.contact-form-title {
+  color: var(--text);
+  font-weight: 700;
 }
 
 .contact-form-field {
-  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-lt);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-form-field:last-of-type {
+  border-bottom: none;
 }
 
 .contact-form-field label {
-  display: block;
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 700;
   color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
+  min-width: 70px;
+  flex-shrink: 0;
 }
 
 .contact-form-field input,
 .contact-form-field textarea {
-  width: 100%;
+  flex: 1;
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--border);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 16px;
-  padding: 0.75rem 0;
-  transition: border-color 0.2s;
+  font-size: 15px;
+  padding: 0.4rem 0;
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
 }
 
 .contact-form-field input::placeholder,
 .contact-form-field textarea::placeholder {
   color: var(--text-dim);
+  opacity: 0.6;
 }
 
 .contact-form-field input:focus,
 .contact-form-field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
+  background: rgba(0, 210, 180, 0.04);
 }
 
 .contact-form-send {
+  display: block;
+  width: 100%;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   background: var(--accent);
   color: var(--bg);
   border: none;
-  padding: 1rem 2rem;
+  border-top: 1px solid var(--border);
+  padding: 1rem 1.25rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s;
 }
 
 .contact-form-send:hover {
@@ -823,7 +842,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .contact-form-send:active {
-  transform: translate(2px, 2px);
+  background: var(--accent-dk);
 }
 
 /* ─── RESPONSIVE ──────────────────────────────────────────── */

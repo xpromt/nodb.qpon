@@ -1,31 +1,12 @@
-name: Deploy to Production
+name: Deploy to Contabo
 
 on:
   push:
     branches: [main]
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Verify site files exist
-        run: |
-          test -f site/index.html || (echo "Missing site/index.html" && exit 1)
-          test -f site/portfolio.css || (echo "Missing site/portfolio.css" && exit 1)
-          test -f formal/site/index.html || (echo "Missing formal/site/index.html" && exit 1)
-          test -f formal/site/portfolio.css || (echo "Missing formal/site/portfolio.css" && exit 1)
-          test -f Dockerfile || (echo "Missing Dockerfile" && exit 1)
-          test -f formal/Dockerfile || (echo "Missing formal/Dockerfile" && exit 1)
-          test -f docker-compose.yml || (echo "Missing docker-compose.yml" && exit 1)
-          echo "All required files present!"
-
   deploy:
-    needs: check
     runs-on: ubuntu-latest
-
     steps:
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.0.3
@@ -34,7 +15,8 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
-            cd /home/olexander/nodb.qpon && \
-            git pull origin main && \
+            cd /opt/nodb.qpon && \
+            git fetch origin && \
+            git reset --hard origin/main && \
             docker compose up -d --build && \
             echo "Deploy complete — formal.nodb.qpon + game.nodb.qpon"

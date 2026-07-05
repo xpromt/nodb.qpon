@@ -912,3 +912,77 @@ a { color: inherit; text-decoration: none; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ── Hobby list ────────────────────────────────────────────── */
+.hobby-group { margin-bottom: 2.5rem; }
+.hobby-group:last-child { margin-bottom: 0; }
+
+.hobby-subtitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hobby-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.hobby-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-lt);
+  transition: background 0.15s;
+}
+.hobby-item:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.hobby-name {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.hobby-name a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+.hobby-name a:hover { color: var(--accent); }
+
+.hobby-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.hobby-stack {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 600px) {
+  .hobby-item {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 1.25rem;
+    row-gap: 2px;
+  }
+  .hobby-name { grid-column: 1; grid-row: 1; }
+  .hobby-desc { grid-column: 2; grid-row: 1; }
+  .hobby-stack { grid-column: 1 / -1; grid-row: 2; }
+}

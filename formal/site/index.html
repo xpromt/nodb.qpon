@@ -300,89 +300,67 @@
   <div class="container">
     <p class="section-eyebrow">Side projects &amp; personal builds</p>
     <h2 class="section-title">Hobby projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-header">
-          <h3><a href="https://burnnode.done.qpon" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">burnNode</a></h3>
-          <span class="project-type">Automation / incremental game</span>
-        </div>
-        <p>Route intercepted communications under fog of war. Automation handles certainty; humans handle uncertainty. Glyph-card decision system with dynamic AI confidence, escalation puzzles, and a prestige loop that widens your theater of operations.</p>
-        <div class="project-tags">
-          <span class="tag tag--stack">TypeScript</span>
-          <span class="tag tag--stack">React 18</span>
-          <span class="tag tag--stack">Vite</span>
-          <span class="tag tag--stack">Zustand</span>
-          <span class="tag tag--stack">Tailwind</span>
-          <span class="tag tag--stack">Vitest</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-header">
-          <h3><a href="https://incunabula.cc/game" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Incunabula</a></h3>
-          <span class="project-type">Incremental word-crafting game</span>
-        </div>
-        <p>Harness sentient letters, craft words, and evolve from a candlelit quill desk into a universal language engine. 26 letters with traits and friendships, combo word chains, prestige editions that transform the aesthetic from ink to code.</p>
-        <div class="project-tags">
-          <span class="tag tag--stack">HTML5</span>
-          <span class="tag tag--stack">CSS3</span>
-          <span class="tag tag--stack">Vanilla JS</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Cartseer</h3>
-          <span class="project-type">Tactical grid game</span>
-        </div>
-        <p>Into the Breach structure, no combat. A family races NPC shoppers around a hypermarket grid to grab discounted items before stock runs out. NPC intent is revealed one turn ahead — the puzzle is positioning and redirecting, not damage.</p>
-        <div class="project-tags">
-          <span class="tag tag--stack">Fastify</span>
-          <span class="tag tag--stack">Prisma</span>
-          <span class="tag tag--stack">PostgreSQL</span>
-          <span class="tag tag--stack">React</span>
-          <span class="tag tag--stack">TypeScript</span>
-          <span class="tag tag--stack">BullMQ</span>
-          <span class="tag tag--stack">Redis</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Cartseer Godot</h3>
-          <span class="project-type">Tactical grid game — native client</span>
-        </div>
-        <p>Godot Engine port of Cartseer with ability systems, enemy AI behaviors, animated sprites, and a full unit roster. Native desktop build for smoother grid interaction and offline play.</p>
-        <div class="project-tags">
-          <span class="tag tag--stack">Godot Engine</span>
-          <span class="tag tag--stack">GDScript</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Didn't Read LOL</h3>
-          <span class="project-type">Exact-cover grid puzzle</span>
-        </div>
-        <p>Open, close, and rotate book-shaped polyominoes until their footprints exactly tile the room with no overlap. Levels generated via Algorithm X (Dancing Links) with guaranteed unique solutions and a point-economy action system.</p>
-        <div class="project-tags">
-          <span class="tag tag--stack">Angular 19</span>
-          <span class="tag tag--stack">PixiJS</span>
-          <span class="tag tag--stack">TypeScript</span>
-          <span class="tag tag--stack">DLX</span>
-          <span class="tag tag--stack">Vitest</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-header">
-          <h3>ReForeseen</h3>
-          <span class="project-type">Browser action-puzzle prototype</span>
-        </div>
-        <p>Turn-based action-puzzle with deterministic collision resolution. Plan moves, shoots, takedowns, and door interactions across beat-timed rooms. Pure simulation core separated from the PixiJS renderer — same event log from CLI and browser.</p>
-        <div class="project-tags">
-          <span class="tag tag--stack">Vite</span>
-          <span class="tag tag--stack">React</span>
-          <span class="tag tag--stack">TypeScript</span>
-          <span class="tag tag--stack">PixiJS</span>
-          <span class="tag tag--stack">Zustand</span>
-        </div>
-      </div>
+
+    <div class="hobby-group">
+      <h3 class="hobby-subtitle">Game development</h3>
+      <ul class="hobby-list">
+        <li class="hobby-item">
+          <span class="hobby-name"><a href="https://burnnode.done.qpon" target="_blank" rel="noopener">burnNode</a></span>
+          <span class="hobby-desc">Automation / incremental game — route intercepted comms under fog of war</span>
+          <span class="hobby-stack">TypeScript · React 18 · Vite · Zustand · Tailwind · Vitest</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name"><a href="https://incunabula.cc/game" target="_blank" rel="noopener">Incunabula</a></span>
+          <span class="hobby-desc">Incremental word-crafting game — sentient letters, word combos, prestige editions</span>
+          <span class="hobby-stack">HTML5 · CSS3 · Vanilla JS</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name">Cartseer</span>
+          <span class="hobby-desc">Tactical grid game — family races NPC shoppers, Into the Breach-style positioning puzzle</span>
+          <span class="hobby-stack">Fastify · Prisma · PostgreSQL · React · TypeScript · BullMQ · Redis</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name">Cartseer Godot</span>
+          <span class="hobby-desc">Native desktop port — ability systems, enemy AI, animated sprites</span>
+          <span class="hobby-stack">Godot Engine · GDScript</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name">Didn't Read LOL</span>
+          <span class="hobby-desc">Exact-cover grid puzzle — rotate polyominoes to tile the room, Algorithm X levels</span>
+          <span class="hobby-stack">Angular 19 · PixiJS · TypeScript · DLX · Vitest</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name">ReForeseen</span>
+          <span class="hobby-desc">Browser action-puzzle — deterministic collision resolution, beat-timed rooms</span>
+          <span class="hobby-stack">Vite · React · TypeScript · PixiJS · Zustand</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hobby-group">
+      <h3 class="hobby-subtitle">Tools &amp; platforms</h3>
+      <ul class="hobby-list">
+        <li class="hobby-item">
+          <span class="hobby-name"><a href="https://codfm.com" target="_blank" rel="noopener">codfm.com</a></span>
+          <span class="hobby-desc">Turn your codebase into music — DNA scores, radar charts, deterministic MIDI from code metrics</span>
+          <span class="hobby-stack">Fastify · Prisma · PostgreSQL · BullMQ · React · Vite · fluidsynth · ffmpeg</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name"><a href="https://gamincube.com" target="_blank" rel="noopener">gamincube.com</a></span>
+          <span class="hobby-desc">Indie game discovery — community nominations, automated graduation to Hall of Fame</span>
+          <span class="hobby-stack">Next.js 14 · Prisma · PostgreSQL · BullMQ · Redis · Tailwind · NextAuth</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name"><a href="https://proofshot.done.qpon" target="_blank" rel="noopener">ProofShot</a></span>
+          <span class="hobby-desc">Browser extension — capture before/after screenshots, align, diff, slider &amp; GIF export</span>
+          <span class="hobby-stack">React 19 · TypeScript · Vite · Tailwind · CRXJS · Zustand · MV3</span>
+        </li>
+        <li class="hobby-item">
+          <span class="hobby-name"><a href="https://cammora.nodb.qpon" target="_blank" rel="noopener">Cammora</a></span>
+          <span class="hobby-desc">Self-hosted WebRTC video monitoring — cameras as infrastructure nodes, edge AI detection</span>
+          <span class="hobby-stack">TypeScript · WebRTC · mediasoup SFU · Node.js · React · Edge AI</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
